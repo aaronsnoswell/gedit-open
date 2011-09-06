@@ -1,0 +1,22 @@
+gedit-open
+==========
+
+This script maps the command "g" to open Gedit in the current working directory.
+
+Steps:
+1. Place the file "g" in your ~/bin directory
+2. Make sure  ~/bin is on your path. You can do this by running the below command
+
+> if [[ ! $PATH =~ ~/bin ]]; then echo "# Add our bin directory to the PATH\nPATH=~/bin:\"\${PATH}\"" >> ~/.bashrc; echo "Added ~/bin to your .bashrc file"; else echo "~/bin is already on your PATH"; fi;
+
+You can now run the command "g" to open everyone's favourite text editor :) You
+can also pass in filenames as arguments, any files that exist and are of
+mime-type "text" will be opened, files that don't exist will be created then
+openend. Examples:
+
+> g
+> g file1.txt file2.html
+> g *
+
+Happy Coding!
+
