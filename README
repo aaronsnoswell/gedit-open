@@ -9,6 +9,10 @@ Steps:
 
 > if [[ ! $PATH =~ ~/bin ]]; then echo "# Add our bin directory to the PATH\nPATH=~/bin:\"\${PATH}\"" >> ~/.bashrc; echo "Added ~/bin to your .bashrc file"; else echo "~/bin is already on your PATH"; fi;
 
+3. You might need to make sure the "g" file is writable
+
+> chmod +x ~/bin/g
+
 You can now run the command "g" to open everyone's favourite text editor :) You
 can also pass in filenames as arguments, any files that exist and are of
 mime-type "text" will be opened, files that don't exist will be created then
